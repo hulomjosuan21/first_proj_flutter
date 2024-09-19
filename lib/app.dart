@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget appBody (){
+  Widget appBody1 (){
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
@@ -42,11 +42,31 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  Widget appBody2() {
+    return Center(
+      child: Container(
+        width: 800,
+        height: 400,
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          border: Border.all(color: Colors.blueAccent, width: 5),
+          borderRadius: const BorderRadius.all(Radius.circular(20)), // Add this line for border radius
+        ),
+        child: Row(
+          children: [
+            Container(height: 80,width: 40,color: Colors.amber,),
+            Container(height: 80,width: 40,color: Colors.blue,)
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
-      body: appBody()
+      body: appBody2()
     );
   }
 }
